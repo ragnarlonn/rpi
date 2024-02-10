@@ -1,2 +1,80 @@
-module Rpi:
-    signal gnd
+component Connector_RaspberryPi:
+    footprint = "PinHeader_2x20_P2.54mm_Vertical"
+
+    # pins
+
+    # 3.3V on pin 1, 17
+    signal vdd ~ pin 1
+    vdd ~ pin 17
+
+    # 5V on pin 2, 4
+    signal vcc ~ pin 2
+    vcc ~ pin 4
+
+    # gnd on pin 6, 9, 14, 20, 25, 30, 34, 39
+    signal gnd ~ pin 6
+    gnd ~ pin 9
+    gnd ~ pin 14
+    gnd ~ pin 20
+    gnd ~ pin 25
+    gnd ~ pin 30
+    gnd ~ pin 34
+    gnd ~ pin 39
+
+    # i2c on pin 3, 5
+    signal i2c_sda ~ pin 3
+    signal i2c_scl ~ pin 5
+
+    # UART on pin 8, 10
+    signal uart0_tx ~ pin 8
+    signal uart0_rx ~ pin 10
+
+    # SPI on pin 19, 21, 23, 24, 26, 35, 36, 38, 40
+    signal spi0_mosi ~ pin 19
+    signal spi0_miso ~ pin 21
+    signal spi0_sclk ~ pin 23
+    signal spi0_cs0 ~ pin 24
+    signal spi0_cs1 ~ pin 26
+    signal spi1_miso ~ pin 35
+    signal spi1_cs0 ~ pin 36
+    signal spi1_mosi ~ pin 38
+    signal spi1_sclk ~ pin 40
+
+    # PWM on pin 12, 32, 33, 35
+    signal pwm0a ~ pin 12
+    signal pwm0b ~ pin 32
+    signal pwm1a ~ pin 33
+    signal pwm1b ~ pin 35
+
+    # PCM on pin 12, 35, 38, 40
+    signal pcm_clk ~ pin 12
+    signal pcm_fs ~ pin 35
+    signal pcm_din ~ pin 38
+    signal pcm_dout ~ pin 40
+
+    # GPIO (BCM) on pins 3, 5, 7, 11, 12, 13, 15, 16, 18, 19, 21, 22, 23, 24, 26, 29, 31, 32, 33, 35, 36, 37, 38, 40
+    signal gpio2 ~ pin 3
+    signal gpio3 ~ pin 5
+    signal gpio4 ~ pin 7
+    signal gpio17 ~ pin 11
+    signal gpio18 ~ pin 12
+    signal gpio27 ~ pin 13
+    signal gpio22 ~ pin 15
+    signal gpio24 ~ pin 18
+    signal gpio10 ~ pin 19
+    signal gpio9 ~ pin 21
+    signal gpio25 ~ pin 22
+    signal gpio11 ~ pin 23
+    signal gpio8 ~ pin 24
+    signal gpio7 ~ pin 26
+    signal gpio5 ~ pin 29
+    signal gpio6 ~ pin 31
+    signal gpio12 ~ pin 32
+    signal gpio13 ~ pin 33
+    signal gpio19 ~ pin 35
+    signal gpio16 ~ pin 36
+    signal gpio26 ~ pin 37
+    signal gpio20 ~ pin 38
+    signal gpio21 ~ pin 40
+
+
