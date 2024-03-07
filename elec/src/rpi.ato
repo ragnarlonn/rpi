@@ -17,6 +17,7 @@ component ConnectorRaspberryPi:
     spi0 = new SPI
     spi1 = new SPI
     i2c = new I2C
+    i2c_id = new I2C
     uart = new UART
 
     # 3.3V on pin 1, 17
@@ -41,6 +42,7 @@ component ConnectorRaspberryPi:
     power3v3.gnd ~ gnd
     power5v.gnd ~ gnd
     i2c.gnd ~ gnd
+    i2c_id.gnd ~ gnd
     spi0.gnd ~ gnd
     spi1.gnd ~ gnd
     uart.gnd ~ gnd
@@ -50,6 +52,12 @@ component ConnectorRaspberryPi:
     signal i2c_scl ~ pin 5
     i2c.sda ~ i2c_sda
     i2c.scl ~ i2c_scl
+
+    # ID EEPROM I2C on pins 27 and 28
+    signal i2c_id_sda ~ pin 27
+    signal i2c_id_scl ~ pin 28
+    i2c_id.sda ~ i2c_id_sda
+    i2c_id.scl ~ i2c_id_scl
 
     # UART on pin 8, 10
     signal uart0_tx ~ pin 8
