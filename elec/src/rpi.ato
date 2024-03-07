@@ -99,6 +99,7 @@ component ConnectorRaspberryPi:
     signal gpio18 ~ pin 12
     signal gpio27 ~ pin 13
     signal gpio22 ~ pin 15
+    signal gpio23 ~ pin 16
     signal gpio24 ~ pin 18
     signal gpio10 ~ pin 19
     signal gpio9 ~ pin 21
