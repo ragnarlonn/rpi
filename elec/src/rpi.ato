@@ -59,6 +59,9 @@ component ConnectorRaspberryPi:
     i2c_id.sda ~ i2c_id_sda
     i2c_id.scl ~ i2c_id_scl
 
+    # GPCLK0 on pin 7
+    signal gpclk0 ~ pin 7
+
     # UART on pin 8, 10
     signal uart0_tx ~ pin 8
     signal uart0_rx ~ pin 10
